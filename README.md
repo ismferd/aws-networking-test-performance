@@ -5,23 +5,37 @@ This is a simple way for test your bandwith and throughput network on amazon-lin
 sudo yum --enablerepo=epel install iperf iperf3
 
 1 - Server:
+
 You must enter in your amazon-linux instance and start iperf3 as a server.
+
 iperf3 -s -p 8080
+
 flags:
+
 	-s: server mode
+
 	-p: port to listen
 
 2 - Client:
+
 iperf3 -c `server_ip` -i 1 -t 10 -V -p 80 -Z  -f M
+
 flags:
+
 	-c: client mode you have to put the server ip_address
+
     -i: interval that you use to send data between client and server
+
 	-t: time
+
 	-p: port where server is listening
+
 	-Z: mode zero-copy
+
 	-f: Format the output in megabytes
 
-# Example:
+## Example:
+
 The client and server are r3.xlarge and they have enabled ENA interfaces.
 
 For know more about ENA on Amazon-Linux:
