@@ -42,6 +42,8 @@ For know more about ENA on Amazon-Linux:
 
 http://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/enhanced-networking.html#supported_instances
 
+## Server:
+
 ```
 [root@ip-xxx-xxx-xxx-xxx ec2-user]# iperf3 -s -p 80
 -----------------------------------------------------------
@@ -66,6 +68,8 @@ Accepted connection from xxx.xxx.xxx.xxx, port 48966
 [  5]   0.00-10.05  sec  0.00 Bytes  0.00 bits/sec                  sender
 [  5]   0.00-10.05  sec  1.12 GBytes   961 Mbits/sec                  receiver
 ```
+
+## Client:
 ```
 [root@ip-xxx.xxx.xxx.xxx ec2-user]# iperf3 -c xxx.xxx.xxx.xxx -i 1 -t 10 -V -p 80 -Z  -f M
 iperf 3.0.12
