@@ -1,4 +1,4 @@
-# iperf3
+# aws-networking-test-performance
 This is a simple way for test your bandwith and throughput network on amazon-linux.
 
 ## Install iperf3
